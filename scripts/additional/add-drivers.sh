@@ -1,13 +1,12 @@
 #!/bin/bash
 # add-drivers.sh
 
-echo "Installing required drivers..."
-sleep 2
+echo "Installing additional drivers..."
+sleep 1
 
-sudo "$pkg_manager" -y install bluez blueman alsa-utils volumeicon-alsa
+sudo nala -y install bluez blueman alsa-utils volumeicon-alsa
 sudo systemctl enable enable bluetooth
 
-echo ""
 echo "Success."
-sleep 2
+sleep 1
 clear

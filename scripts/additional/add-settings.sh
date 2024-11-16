@@ -2,7 +2,7 @@
 # add-settings.sh
 
 echo "Applying final desktop settings..."
-sleep 2
+sleep 1
 
 wallpaper1="illustrated-wpp.jpg"
 wallpaper2="photography-wpp.jpg"
@@ -16,6 +16,7 @@ xfconf-query -c xfce4-desktop -p /desktop-background -s "$destination_dir/$wallp
 # Sets LightDM background
 
 if [ -f /etc/lightdm/lightdm.conf ]; then
+    echo ""
     if sudo sed -i "s|^#background=.*|background=$destination_dir/$wallpaper2|" /etc/lightdm/lightdm.conf; then
         echo "Login screen background changed successfully."
     else
@@ -37,5 +38,5 @@ sleep 1
 clear
 
 echo "Success."
-sleep 2
+sleep 1
 clear
