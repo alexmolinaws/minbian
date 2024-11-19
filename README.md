@@ -126,15 +126,16 @@ These packages form the Minbian setup core apps, tho things like the media playe
 - Bluetooth drivers and utilities
 - A native office suite (for x64)
 - Illustration & design software
-- A code editor (Sublime Text 4)
+- A light code editor (2 options)
 - FOSS extensible IDE (2 options)
 
 ##### Note:
 
 The packages above are optional. And the options for certain apps are as follows:
 
-- Design apps: Inkscape and GIMP (32 and 64-bit), Krita (64-bit)
-- FOSS extensible IDE: Geany (for 32-bit) and VSCodium (64-bit)
+- Design apps: Inkscape and GIMP (for both 32-bit and 64-bit)
+- Graphic code/text editors: Mousepad (Xfce) and Pluma (MATE)
+- FOSS extensible IDE: Geany (for 32-bit) or VSCodium (64-bit)
 
 ## Recommendations
 

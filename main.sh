@@ -71,7 +71,7 @@ bluetooth=$([[ "$bt_choice" =~ ^[yY]$ ]] && echo "true" || echo "false")
 
 echo ""
 
-read -p "Will you develop software on this PC? (y/n): " dev_choice
+read -p "Will you require a graphic code/text editor? (y/n): " dev_choice
 while [[ ! "$dev_choice" =~ ^[yYnN]$ ]]; do
     read -p "Please, answer with 'y' o 'n': " dev_choice
 done
@@ -80,7 +80,7 @@ dev=$([[ "$dev_choice" =~ ^[yY]$ ]] && echo "true" || echo "false")
 if "$dev"; then
     echo ""
 
-    read -p "Want to install an IDE for programming (y/n)?: " ide_choice
+    read -p "Want to also add an IDE for programming (y/n)?: " ide_choice
     while [[ ! "$ide_choice" =~ ^[yYnN]$ ]]; do
         read -p "Please, answer with 'y' o 'n': " ide_choice
     done
@@ -108,9 +108,6 @@ design=$([[ "$design_choice" =~ ^[yY]$ ]] && echo "true" || echo "false")
 echo ""
 echo "Thank you! Your software has been selected,"
 echo "Minbian will now install it automatically."
-
-export x86
-export ide
 
 sleep 2
 clear
@@ -157,7 +154,37 @@ if [ "$bluetooth" = "true" ]; then
 fi
 
 if [ "$dev" = "true" ]; then
-    sudo -E ./dev-software/add-fordev.sh
+    echo "Installing software for development..."
+    sleep 1
+
+    sudo nala install -y mousepad pluma
+
+    if [ "$ide" = "true" ]; then
+        if [ "$x86" = "true" ]; then
+            sudo nala install -y geany geany-plugins
+        else
+            if [ "$low_ram" = "true" ]; then
+                sudo nala install -y geany geany-plugins
+            else
+                # Installs GPG key for VSCodium
+                wget --show-progress - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+                | gpg --dearmor \
+                | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+
+                # Adds VSCodium's repository
+                echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
+                | sudo tee /etc/apt/sources.list.d/vscodium.list
+
+                sudo nala install -y codium
+            fi
+        fi
+    fi
+    
+    clear
+
+    echo "Success."
+    sleep 1
+    clear
 fi
 
 if [ "$x86" = "false" ]; then
@@ -167,7 +194,7 @@ if [ "$x86" = "false" ]; then
 fi
 
 if [ "$design" = "true" ]; then
-    sudo -E ./additional/add-design.sh
+    sudo ./additional/add-design.sh
 fi
 
 # Run final settings script
