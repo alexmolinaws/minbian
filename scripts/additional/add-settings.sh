@@ -10,8 +10,8 @@ DESTINATION="~/.local/share/backgrounds/"
 
 ERROR_TXT="Couldn't change image in lightdm.conf. Skipping..."
 
-sudo cp "media/$WALLPAPER1" "$DESTINATION/"
-sudo cp "media/$WALLPAPER2" "$DESTINATION/"
+cp "media/$WALLPAPER1" "$DESTINATION/"
+cp "media/$WALLPAPER2" "$DESTINATION/"
 
 xfconf-query -c xfce4-desktop -p /desktop-background -s "$DESTINATION/$WALLPAPER1"
 

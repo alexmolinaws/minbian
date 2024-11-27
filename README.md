@@ -62,9 +62,9 @@ Do you need a code editor? (y/n)
 ### Hardware
 
 - Recommended CPU: at least 1 core with 1.6 Ghz of frequency and 512 Kb of cache memory is required
-- Recommended RAM: we recommend having at least 2 Gb (for 32-bit) or 4 Gb (for 64-bit) of RAM
+- Recommended RAM: having at least 2 Gb (for 32-bit) or 4 Gb (for 64-bit) of RAM is recommended
 - Recommended ROM: 16 Gb is the minimum required for the root partition (where OS and apps live)
-- Swap partition: optional, but we recommend having 2 Gb for users with less than 4 Gb of total RAM
+- Swap partition: having at least 2 Gb for users with less than 4 Gb of total RAM is recommended
 
 ##### Note
 
@@ -105,16 +105,16 @@ Minbian works perfectly on both x86 and x64 architectures, it's been tested on b
 
 - Login Manager (LightDM)
 - Desktop Environment (Xfce)
-- System fonts for compatibility
 - Terminal emulator (2 options)
-- Light files manager (Thunar)
-- CLI front-end for APT (Nala)
+- Plugins for audio, network, etc
+- Files explorer/manager (Thunar)
+- APT modern CLI front-end (Nala)
+- System fonts for compatibility
 - Calculator (Gnome Calculator)
-- Images and PDF file viewers
-- Audio, network and power plugins
+- Images, video and PDF viewers
 - Screenshooter tool (by Xfce)
 - Sticky Notes tool (by Xfce)
-- Audio and video player (VLC)
+- A music player (Rhythmbox)
 - FOSS web browser (Firefox)
 
 ##### Note:
@@ -126,7 +126,7 @@ These packages form the Minbian setup core apps, tho things like the media playe
 - Bluetooth drivers and utilities
 - A native office suite (for x64)
 - Illustration & design software
-- A light code editor (2 options)
+- A light code/text editor (Pluma)
 - FOSS extensible IDE (2 options)
 
 ##### Note:
@@ -134,12 +134,11 @@ These packages form the Minbian setup core apps, tho things like the media playe
 The packages above are optional. And the options for certain apps are as follows:
 
 - Design apps: Inkscape and GIMP (for both 32-bit and 64-bit)
-- Graphic code/text editors: Mousepad (Xfce) and Pluma (MATE)
 - FOSS extensible IDE: Geany (for 32-bit) or VSCodium (64-bit)
 
 ## Recommendations
 
 - Check the specifications of your computer before installing this setup, they provide useful information to get the best installation experience, and some steps rely on that.
 - If you're unsure, feel free to read the script and compare the packages Minbian includes with the ones listed on the [Debian Wiki](https://www.debian.org/distrib/packages). Never install software you can't trust.
-- If you're customizing the scripts before installing, we recommend you to not modify any lines you don't understand. It's better to "tweak it" once it's solid and done. 
-- If the setup you're looking for is meant to play specific videogames or performing complex activities we might not cover out of the box, check first if using Minbian is right for you.
+- If you're customizing the scripts before installing, modifying any lines you don't understand is not recommended. It's better to "tweak it" once it's solid and done.
+- If the setup you're looking for is meant to play specific videogames or performing complex activities this might not cover out of the box, verify using Minbian is right for you.

@@ -1,7 +1,7 @@
 #!/bin/bash
 # add-office.sh
 
-echo "Installing your office suite..."
+echo "Installing an office suite..."
 sleep 1
 
 sudo nala install -y libreoffice

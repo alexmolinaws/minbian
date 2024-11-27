@@ -14,7 +14,7 @@ echo "
 |  |_|  |_| |_| |_| \_| |____/  |_| |_| |_| |_| \_|  |
 |                                                    |
 ----------------- DEBIAN DONE SMALL ------------------
-                                                      
+
 || "$mbv" | Minbian and The FOSS Community | GPL v3 ||
 "
 echo ""
@@ -39,7 +39,7 @@ if [[ "$start_installation" =~ ^[nN]$ ]]; then
     sleep 1
     echo ""
     echo "If you had any struggles or doubts, visit:"
-    echo "Docs at https://github.com/alexmolinaws/minbian"
+    echo "Repo: https://github.com/alexmolinaws/minbian"
     echo ""
     exit 0
 fi
@@ -157,29 +157,25 @@ if [ "$dev" = "true" ]; then
     echo "Installing software for development..."
     sleep 1
 
-    sudo nala install -y mousepad pluma
+    sudo nala install -y pluma
 
     if [ "$ide" = "true" ]; then
-        if [ "$x86" = "true" ]; then
-            sudo nala install -y geany geany-plugins
+        if [ "$x86" = "false" ] && [ "low_ram" = "false" ]; then
+            # Installs GPG key for VSCodium
+            wget --show-progress - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+            | gpg --dearmor \
+            | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+
+            # Adds VSCodium's repository
+            echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
+            | sudo tee /etc/apt/sources.list.d/vscodium.list
+
+            sudo nala install -y codium
         else
-            if [ "$low_ram" = "true" ]; then
-                sudo nala install -y geany geany-plugins
-            else
-                # Installs GPG key for VSCodium
-                wget --show-progress - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
-                | gpg --dearmor \
-                | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
-
-                # Adds VSCodium's repository
-                echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
-                | sudo tee /etc/apt/sources.list.d/vscodium.list
-
-                sudo nala install -y codium
-            fi
+            sudo nala install -y geany geany-plugins
         fi
     fi
-    
+
     clear
 
     echo "Success."
@@ -218,7 +214,7 @@ echo "
 |  |_|  |_| |_| |_| \_| |____/  |_| |_| |_| |_| \_|  |
 |                                                    |
 ----------------- DEBIAN DONE SMALL ------------------
-                                                      
+
 || "$mbv" | Minbian and The FOSS Community | GPL v3 ||
 "
 echo ""
