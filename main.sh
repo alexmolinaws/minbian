@@ -136,13 +136,13 @@ sudo apt install -y nala
 clear
 
 # Run standart setup scripts
-if ! sudo ./core-modules.sh; then
+if ! sudo ./scripts/core-modules.sh; then
     echo "Error: Failed to run core-modules.sh"
     echo "Minbian relies on it, check and retry."
     exit 1
 fi
 
-if ! sudo ./core-desktop.sh; then
+if ! sudo ./scripts/core-desktop.sh; then
     echo "Error: Failed to run core-desktop.sh"
     echo "Minbian relies on it, check and retry."
     exit 1
@@ -150,7 +150,7 @@ fi
 
 # Install software based on choices
 if [ "$bluetooth" = "true" ]; then
-    sudo ./additional/add-drivers.sh
+    sudo ./scripts/additional/add-drivers.sh
 fi
 
 if [ "$dev" = "true" ]; then
@@ -185,16 +185,16 @@ fi
 
 if [ "$x86" = "false" ]; then
     if [ "$office" = "true" ]; then
-        sudo ./additional/add-office.sh
+        sudo ./scripts/additional/add-office.sh
     fi
 fi
 
 if [ "$design" = "true" ]; then
-    sudo ./additional/add-design.sh
+    sudo ./scripts/additional/add-design.sh
 fi
 
 # Run final settings script
-if ! sudo ./additional/add-settings.sh; then
+if ! sudo ./scripts/additional/add-settings.sh; then
     echo "Error: Failed to run add-settings.sh"
 fi
 
