@@ -47,6 +47,7 @@ git clone https://github.com/alexmolinaws/minbian.git
 
 ```
 cd /minbian
+sudo ./main.sh
 ```
 
 - [ ] Answer to select software, for example:
