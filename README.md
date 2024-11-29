@@ -73,48 +73,51 @@ Minbian works perfectly on both x86 and x64 architectures, it's been tested on b
 
 ## Screenshots
 
-#### Overview
+### Overview
+
 ![Minbian neofetch overview](./screenshots/overview-1.png)
 
 ![Minbian desktop overview](./screenshots/overview-2.png)
 
 #### Look & Feel
+
 ![Minbian desktop overview](./screenshots/look-feel-1.png)
 
 ![Minbian desktop overview](./screenshots/look-feel-4.png)
 
 #### Development
+
 ![Minbian desktop overview](./screenshots/development-1.png)
 
-![Minbian desktop overview](./screenshots/development-4.png)
+![Minbian desktop overview](./screenshots/development-2.png)
 
 #### Other Apps
+
 ![Minbian desktop overview](./screenshots/other-apps-1.png)
 
-![Minbian desktop overview](./screenshots/other-apps-3.png)
+![Minbian desktop overview](./screenshots/other-apps-2.png)
 
 ## Software Included
 
-#### Crucial Packages
+### Crucial Packages
 
 - Display Server by X.Org
 - Firewall Manager (UFW)
 - System monitoring tools
 - System daemons and commands
 
-#### Default Desktop
+### Default Desktop
 
 - Login Manager (LightDM)
 - Desktop Environment (Xfce)
 - Terminal emulator (2 options)
-- Plugins for audio, network, etc
+- Audio, network, etc. plugins
 - Files explorer/manager (Thunar)
 - APT modern CLI front-end (Nala)
 - System fonts for compatibility
 - Calculator (Gnome Calculator)
 - Images, video and PDF viewers
 - Screenshooter tool (by Xfce)
-- Sticky Notes tool (by Xfce)
 - A music player (Rhythmbox)
 - FOSS web browser (Firefox)
 
@@ -122,20 +125,17 @@ Minbian works perfectly on both x86 and x64 architectures, it's been tested on b
 
 These packages form the Minbian setup core apps, tho things like the media player and browser are up to you to keep or replace. The installation includes *Firefox ESR* as the default browser since it's proven to be stable, secure, and resources-friendly. It also includes the *Xfce Terminal* and *XTerm* emulators for the command line; keeping both is recommended for practical reasons.
 
-#### Optional Packages
+### Optional Packages
 
 - Bluetooth drivers and utilities
-- A native office suite (for x64)
-- Illustration & design software
 - A light code/text editor (Pluma)
-- FOSS extensible IDE (2 options)
+- IDE: VSCodium or Geany (for x86)
+- The LibreOffice suite (x64 only)
+- Design software (Inkscape, GIMP)
 
-##### Note:
+### Aditional
 
-The packages above are optional. And the options for certain apps are as follows:
-
-- Design apps: Inkscape and GIMP (for both 32-bit and 64-bit)
-- FOSS extensible IDE: Geany (for 32-bit) or VSCodium (64-bit)
+- 2 wallpaper options in folder
 
 ## Recommendations
 

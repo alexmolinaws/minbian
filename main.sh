@@ -193,11 +193,6 @@ if [ "$design" = "true" ]; then
     sudo ./scripts/additional/add-design.sh
 fi
 
-# Run final settings script
-if ! sudo ./scripts/additional/add-settings.sh; then
-    echo "Error: Failed to run add-settings.sh"
-fi
-
 echo ""
 echo "Minbian is done."
 sleep 2
