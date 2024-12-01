@@ -157,25 +157,11 @@ if [ "$dev" = "true" ]; then
     echo "Installing software for development..."
     sleep 1
 
-    sudo nala install -y pluma
-
     if [ "$ide" = "true" ]; then
-        if [ "$x86" = "false" ] && [ "low_ram" = "false" ]; then
-            # Installs GPG key for VSCodium
-            wget --show-progress - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
-            | gpg --dearmor \
-            | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
-
-            # Adds VSCodium's repository
-            echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
-            | sudo tee /etc/apt/sources.list.d/vscodium.list
-
-            sudo nala install -y codium
-        else
-            sudo nala install -y geany geany-plugins
-        fi
+        sudo nala install -y pluma geany geany-plugins
+    else
+        sudo nala install -y pluma
     fi
-
     clear
 
     echo "Success."
@@ -214,8 +200,9 @@ echo "
 "
 echo ""
 echo "Installation complete! Thanks for trying Minbian!"
+echo "Note: you've got 2 wallpapers in 'minbian' folder"
 echo ""
-echo "Note: reboot your system to apply changes, enjoy."
+echo "Reboot your system to apply all changes, & enjoy."
 echo ""
 
 exit 0

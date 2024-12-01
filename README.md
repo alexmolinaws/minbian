@@ -2,11 +2,11 @@
 
 Minbian is a FOSS install Bash script for Debian GNU/Linux (and derivatives) that implements automation during the post-install stage of the OS, to set up a lightweight minimal desktop for personal computers with low-end hardware, users with a taste for minimalism, developers or starters who want to try Debian without a bloated setup but still have an overall user-friendly experience.
 
-Minbian lets you choose what to install, apart from the ready-to-go desktop tools, based on user input. You can get nice and solid setups up and running within minutes: from just a DE and browser on a netbook, to an office-oriented workstation, or even a robust IDE.
+Minbian lets you choose what to install, apart from the ready-to-go desktop tools, based on user input. You can get nice and solid setups up and running within minutes: from just a DE and browser on a netbook, or an office-oriented workstation, to a robust and powerful development environment.
 
 ## The name
 
-"Minbian" setups are called this way since theit goal is not to create "yet another Debian fork" but a minimal Debian installation that is flexible, fast and secure. The project's got a namesake pet on the logo showing a snow fox pup (or a wolf, dog, coyote, anyone the user sees it like since it's their computer) with the Debian spiral on the eye. Minbian represents how small yet powerful and easy the Debian experience can be, having an average of 1200 packages.
+"Minbian" setups are called this way since their goal is not to create "yet another Debian fork" but a minimal Debian installation that is flexible, fast and secure. The project's got a namesake pet on the logo showing a snow fox pup (or a wolf, dog, coyote, anyone the user sees it like since it's their computer) with the Debian spiral on the eye. Minbian represents how small yet powerful and easy the Debian experience can be, having an average of 1200 packages.
 
 ## Usage
 
@@ -79,19 +79,19 @@ Minbian works perfectly on both x86 and x64 architectures, it's been tested on b
 
 ![Minbian desktop overview](./screenshots/overview-2.png)
 
-#### Look & Feel
+### Look & Feel
 
 ![Minbian desktop overview](./screenshots/look-feel-1.png)
 
 ![Minbian desktop overview](./screenshots/look-feel-4.png)
 
-#### Development
+### Development
 
 ![Minbian desktop overview](./screenshots/development-1.png)
 
 ![Minbian desktop overview](./screenshots/development-2.png)
 
-#### Other Apps
+### Other Apps
 
 ![Minbian desktop overview](./screenshots/other-apps-1.png)
 
@@ -111,7 +111,7 @@ Minbian works perfectly on both x86 and x64 architectures, it's been tested on b
 - Login Manager (LightDM)
 - Desktop Environment (Xfce)
 - Terminal emulator (2 options)
-- Audio, network, etc. plugins
+- Audio, places and more plugins
 - Files explorer/manager (Thunar)
 - APT modern CLI front-end (Nala)
 - System fonts for compatibility
@@ -129,7 +129,7 @@ These packages form the Minbian setup core apps, tho things like the media playe
 
 - Bluetooth drivers and utilities
 - A light code/text editor (Pluma)
-- IDE: VSCodium or Geany (for x86)
+- Light extensible FOSS IDE (Geany)
 - The LibreOffice suite (x64 only)
 - Design software (Inkscape, GIMP)
 
