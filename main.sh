@@ -2,7 +2,7 @@
 # main.sh
 
 # Current version
-mbv="v1.0.0"
+mbv="v1.0.1"
 
 echo "
 ------------------------------------------------------
@@ -71,7 +71,7 @@ bluetooth=$([[ "$bt_choice" =~ ^[yY]$ ]] && echo "true" || echo "false")
 
 echo ""
 
-read -p "Will you require a graphic code/text editor? (y/n): " dev_choice
+read -p "Will you need to edit code/text files? (y/n): " dev_choice
 while [[ ! "$dev_choice" =~ ^[yYnN]$ ]]; do
     read -p "Please, answer with 'y' o 'n': " dev_choice
 done
@@ -80,17 +80,17 @@ dev=$([[ "$dev_choice" =~ ^[yY]$ ]] && echo "true" || echo "false")
 if "$dev"; then
     echo ""
 
-    read -p "Want to also add an IDE for programming (y/n)?: " ide_choice
-    while [[ ! "$ide_choice" =~ ^[yYnN]$ ]]; do
-        read -p "Please, answer with 'y' o 'n': " ide_choice
+    read -p "Are you a software or web developer? (y/n): " sub_choice
+    while [[ ! "$sub_choice" =~ ^[yYnN]$ ]]; do
+        read -p "Please, answer with 'y' o 'n': " sub_choice
     done
-    ide=$([[ "$ide_choice" =~ ^[yY]$ ]] && echo "true" || echo "false")
+    subl=$([[ "$sub_choice" =~ ^[yY]$ ]] && echo "true" || echo "false")
 fi
 
 
 if [ "$x86" = "false" ]; then
     echo ""
-    read -p "Will you require an office suite (y/n): " office_choice
+    read -p "Will you require an office suite? (y/n): " office_choice
     while [[ ! "$office_choice" =~ ^[yYnN]$ ]]; do
         read -p "Please, answer with 'y' o 'n': " office_choice
     done
@@ -154,16 +154,21 @@ if [ "$bluetooth" = "true" ]; then
 fi
 
 if [ "$dev" = "true" ]; then
-    echo "Installing software for development..."
+    echo "Installing your code/text editor..."
     sleep 1
 
-    if [ "$ide" = "true" ]; then
-        sudo nala install -y pluma geany geany-plugins
+    if [ "$subl" = "true" ]; then
+		wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg > /dev/null
+		echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+		sudo nala update
+		sudo nala install -y sublime-text
+		
     else
         sudo nala install -y pluma
     fi
     clear
 
+	echo ""
     echo "Success."
     sleep 1
     clear

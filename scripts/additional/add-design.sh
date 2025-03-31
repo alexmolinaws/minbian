@@ -6,6 +6,7 @@ sleep 1
 
 sudo nala install -y inkscape gimp
 
+echo ""
 echo "Success."
 sleep 1
 clear

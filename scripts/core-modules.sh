@@ -9,7 +9,6 @@ sudo nala install -y xorg xbacklight xbindkeys xvkbd xinput build-essential dial
 echo ""
 echo "Enabling display server and utilities..."
 
-echo ""
 sudo systemctl enable acpid
 sudo systemctl enable avahi-daemon
 sudo systemctl enable NetworkManager
@@ -20,7 +19,6 @@ sudo ufw allow http
 sudo ufw allow https
 sudo ufw reload
 
-echo ""
 echo "Success."
 sleep 1
 clear

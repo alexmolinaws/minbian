@@ -1,18 +1,16 @@
 # Minbian
 
-Minbian is a FOSS install Bash script for Debian GNU/Linux (and derivatives) that implements automation during the post-install stage of the OS, to set up a lightweight minimal desktop for personal computers with low-end hardware, users with a taste for minimalism, developers or starters who want to try Debian without a bloated setup but still have an overall user-friendly experience.
-
-Minbian lets you choose what to install, apart from the ready-to-go desktop tools, based on user input. You can get nice and solid setups up and running within minutes: from just a DE and browser on a netbook, or an office-oriented workstation, to a robust and powerful development environment.
+Minbian is a free and open-source installation script written in Bash for setting up a lightweight, minimal desktop setup on Debian GNU/Linux systems (and derivatives), automating the customization process of your OS and oriented to: software developers, users with low-end hardware, or anybody wanting to try Debian without a bloated installation yet looking for an overall user-friendly experience. It lets you choose what to install based on input, apart from the ready-to-go desktop tools. You can get nice and solid setups up and running within minutes: from just a DE and browser on a netbook, or an office-oriented workstation, to a robust development environment.
 
 ## The name
 
-"Minbian" setups are called this way since their goal is not to create "yet another Debian fork" but a minimal Debian installation that is flexible, fast and secure. The project's got a namesake pet on the logo showing a snow fox pup (or a wolf, dog, coyote, anyone the user sees it like since it's their computer) with the Debian spiral on the eye. Minbian represents how small yet powerful and easy the Debian experience can be, having an average of 1200 packages.
+"Minbian" setups are called this way since their goal is not to create "yet another Debian fork" but a minimal Debian installation that is flexible, fast and secure. The project's got a namesake pet on the logo showing a snow fox pup (or a wolf, dog, coyote, anyone the user sees it like since it's their computer) with the Debian spiral on the eye. Minbian represents how small yet powerful and easy the Debian experience can be, with an average of 1200 packages.
 
 ## Usage
 
 If you're an user who likes minimalism, stability, security, and customization (which is basically what most of GNU/Linux users appreciate to have) but don't like wasting hours installing (or removing) stuff on your own, Minbian can do wonders for you.
 
-After installing the base system, you download and run the script, answer yes or no (y/n) a couple times, and let Minbian add everything you'll need automatically. No bloatware, ricing, nor tracking.
+After installing the base system, you download and run the script, answer yes or no (y/n) a couple times, and let Minbian add everything you'll need automatically. No bloatware, no ricing, no tracking.
 
 ### Previous Steps
 
@@ -64,7 +62,7 @@ Do you need a code editor? (y/n)
 
 - Recommended CPU: at least 1 core with 1.6 Ghz of frequency and 512 Kb of cache memory is required
 - Recommended RAM: having at least 2 Gb (for 32-bit) or 4 Gb (for 64-bit) of RAM is recommended
-- Recommended ROM: 16 Gb is the minimum required for the root partition (where OS and apps live)
+- Recommended ROM: 16 Gb is the minimum required for the root partition (where the OS & apps live)
 - Swap partition: having at least 2 Gb for users with less than 4 Gb of total RAM is recommended
 
 ##### Note
@@ -115,21 +113,21 @@ Minbian works perfectly on both x86 and x64 architectures, it's been tested on b
 - Files explorer/manager (Thunar)
 - APT modern CLI front-end (Nala)
 - System fonts for compatibility
-- Calculator (Gnome Calculator)
-- Images, video and PDF viewers
+- A light calculator (Galculator)
+- Images, videos and PDF viewers
 - Screenshooter tool (by Xfce)
 - A music player (Rhythmbox)
 - FOSS web browser (Firefox)
 
 ##### Note:
 
-These packages form the Minbian setup core apps, tho things like the media player and browser are up to you to keep or replace. The installation includes *Firefox ESR* as the default browser since it's proven to be stable, secure, and resources-friendly. It also includes the *Xfce Terminal* and *XTerm* emulators for the command line; keeping both is recommended for practical reasons.
+These packages form the Minbian setup core apps, tho things like the media player and browser are up to you to keep or replace. The installation includes *Firefox ESR* as the default browser since it's proven to be stable, secure, and resources-friendly. It also includes the *Xfce Terminal* and *XTerm* emulators for the command line; yet keeping both is recommended for practical reasons.
 
 ### Optional Packages
 
 - Bluetooth drivers and utilities
-- A light code/text editor (Pluma)
-- Light extensible FOSS IDE (Geany)
+- A minimal code/text editor (Pluma)
+- Development software (Sublime Text)
 - The LibreOffice suite (x64 only)
 - Design software (Inkscape, GIMP)
 

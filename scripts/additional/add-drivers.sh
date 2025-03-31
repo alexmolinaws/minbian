@@ -7,6 +7,7 @@ sleep 1
 sudo nala install -y bluez blueman alsa-utils volumeicon-alsa
 sudo systemctl enable bluetooth
 
+echo ""
 echo "Success."
 sleep 1
 clear
