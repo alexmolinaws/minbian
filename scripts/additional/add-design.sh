@@ -2,7 +2,7 @@
 # add-design.sh
 
 echo "Installing design software..."
-sleep 1
+sleep 2
 
 sudo nala install -y inkscape gimp
 

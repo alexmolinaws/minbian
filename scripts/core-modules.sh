@@ -2,18 +2,16 @@
 # core-modules.sh
 
 echo "Installing desktop system core modules..."
-sleep 1
+sleep 2
 
-sudo nala install -y xorg xbacklight xbindkeys xvkbd xinput build-essential dialog mtools acpi acpid gvfs-backends avahi-utils neofetch htop network-manager network-manager-gnome ufw curl brightnessctl
+sudo nala install -y build-essential xbacklight xvkbd xbindkeys mtools acpi acpid gvfs-backends avahi-utils network-manager network-manager-gnome ufw curl brightnessctl htop neofetch
 
-echo ""
-echo "Enabling display server and utilities..."
-
+# Enables crucial system services
 sudo systemctl enable acpid
 sudo systemctl enable avahi-daemon
 sudo systemctl enable NetworkManager
 
-echo "Getting key firewall settings done..."
+# Firewall configuration
 sudo ufw enable
 sudo ufw allow http
 sudo ufw allow https

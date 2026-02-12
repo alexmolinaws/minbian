@@ -2,7 +2,7 @@
 # add-drivers.sh
 
 echo "Installing additional drivers..."
-sleep 1
+sleep 2
 
 sudo nala install -y bluez blueman alsa-utils volumeicon-alsa
 sudo systemctl enable bluetooth

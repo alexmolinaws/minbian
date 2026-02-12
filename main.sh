@@ -2,7 +2,7 @@
 # main.sh
 
 # Current version
-mbv="v1.0.1"
+mbv="v1.2.0"
 
 echo "
 ------------------------------------------------------
@@ -21,9 +21,9 @@ echo ""
 echo "Welcome to the Minbian setup installation script!"
 echo ""
 echo "This will install a minimal debian desktop by doing:"
-echo "- Debian GNU/Linux OS optimization for desktop use"
+echo "- Operating system optimization for workstations"
 echo "- Desktop environment installation and settings"
-echo "- Both general use and optional apps installation"
+echo "- General use and optional software installation"
 echo ""
 echo "NOTE: proceed only if your user is in the sudo group."
 
@@ -55,7 +55,7 @@ x86=$([[ "$arch_choice" =~ ^[yY]$ ]] && echo "true" || echo "false")
 
 echo ""
 
-read -p "Does it have less than 4 GB of RAM? (y/n): " ram_choice
+read -p "Does it have 4 GB of RAM (or less)? (y/n): " ram_choice
 while [[ ! "$ram_choice" =~ ^[yYnN]$ ]]; do
     read -p "Please, answer with 'y' or 'n': " ram_choice
 done
