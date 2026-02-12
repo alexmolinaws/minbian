@@ -122,8 +122,8 @@ Minbian works on x86 and x64 architectures, but you need to select the right ISO
 
 - Login Manager (LightDM)
 - Desktop Environment (Xfce)
-- Terminal emulator (by Xfce)
 - APT modern CLI front-end (Nala)
+- Terminal emulator (MATE Terminal)
 - Audio, location, & more plugins
 - Files explorer/manager (Thunar)
 - System fonts for compatibility
